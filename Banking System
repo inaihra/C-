@@ -1,0 +1,59 @@
+```#include <iostream>
+
+int main() {
+
+  int pin_code = 1606;  
+  int realtime_balance = 1900; 
+  int check_activity; 
+
+  int deposited_money; 
+  int withdrawed_money;
+
+  std::cout << "Welcome to Soul Banking! - What is your PIN code?: "; 
+  std::cin >> pin_code; 
+
+  if (pin_code == 1606) { 
+    std::cout << "Would you like to:\n" << "1) Check Balance\n" << "2) Deposit Money\n" << "3) Withdraw Money"; 
+    std::cin >> check_activity;
+
+    switch(check_activity) {
+      case 1:
+        std::cout << "Your current balance is: " << "£" << realtime_balance;
+        break; 
+
+      case 2: {
+        std::cout << "How much would you like to deposit?: ";
+        std::cin >> deposited_money; 
+        std::cout << "You have deposited: " << "£" << deposited_money << "\n";
+        int new_balance = (realtime_balance + deposited_money);
+        std::cout << "Your new balance is: " << "£" << new_balance << "\n";
+        break;
+      }
+
+      case 3: {
+        std::cout << "How much money would you like to withdraw? ";  
+        std::cin >> withdrawed_money;  
+        int new_balance = (realtime_balance - withdrawed_money);
+        std::cout << "Your balance is now: " << new_balance << "\n";
+        break; 
+      }
+
+      default: 
+      std::cout << "This is invalid - Please try again later! ";
+      break;
+      
+    }  
+
+  }
+
+  else { 
+    std::cout << "The PIN is incorrect!\n";
+  }
+
+
+
+
+return 0; 
+
+
+}```
