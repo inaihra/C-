@@ -1,0 +1,171 @@
+#include <iostream>
+
+
+int main() {
+
+// Houses:
+int gryffindor = 0;
+int hufflepuff = 0;
+int ravenclaw = 0;
+int slytherin = 0; 
+
+
+// Answers:
+int answer_1; 
+int answer_2;
+int answer_3;
+int answer_4; 
+
+// Maximum Points Variable: 
+int max = 0;
+std::string most_points_house; 
+
+// Introductions:
+std::cout << "You have started The Sorting Hat Quiz!\n"; 
+std::cout << "Question 1) When i'm dead, I want people to remember me as:\n" << "\n" << "1) The Good\n" << "2) The Great\n" << "3) The Wise\n" << "4) The Bold\n"; 
+
+
+
+// First questions answer: 
+std::cin >> answer_1;
+
+if (answer_1 == 1) {
+  hufflepuff++;
+  std::cout << "Hufflepuff has gained a point!\n";
+}
+
+  else if (answer_1 == 2) {
+    slytherin++; 
+    std::cout << "Slytherin has gained a point!\n";
+  }
+
+  else if (answer_1 == 3) {
+    ravenclaw++;
+    std::cout << "Ravenclaw has gained a point!\n";
+  }
+
+  else if (answer_1 == 4) { 
+    gryffindor++;
+    std::cout << "Gryffindor has gained a point!\n";
+    std::cout << gryffindor;
+  }
+
+  else { 
+  std::cout << "Invalid Answer! - Restart";
+  }
+
+
+// Question 2:
+  std::cout << "Dawn or Dusk?\n" << "\n" << "1) Dawn\n" << "2) Dusk\n"; 
+  std::cin >> answer_2; 
+
+  if (answer_2 == 1) {
+    gryffindor++, ravenclaw++;
+    std::cout << "Gryffindor now has " << gryffindor << " Points!\n";
+    std::cout << "Ravenclaw now has " << ravenclaw << " Points!\n";
+  }
+
+  else if (answer_2 == 2) {
+    hufflepuff++, slytherin++;
+    std::cout << "Hufflepuff now has " << hufflepuff << " Points!\n"; 
+    std::cout << "Slytherin now has " << slytherin << " Points!\n"; 
+  }
+
+  else { 
+    std::cout << "Invalid input! - Retry again";
+  }
+
+
+// Question 3:
+std::cout << "Question 3) Which kind of instrument most pleases your ear?\n" << "\n" << "1) The violin\n" << "2) The trumpet\n" << "3) The piano\n" << "4) The drum\n"; 
+std::cin >> answer_3; 
+
+if (answer_3 == 1) {
+  slytherin++; 
+  std::cout << "Slytherin now has " << slytherin << " Points!\n"; 
+}
+
+else if (answer_3 == 2) {
+  hufflepuff++; 
+  std::cout << "Hufflepuff now has " << hufflepuff << " Points!\n"; 
+}
+
+else if (answer_3 == 3) {
+  ravenclaw++; 
+  std::cout << "Ravenclaw now has " << ravenclaw << " Points!\n"; 
+}
+
+else if (answer_3 == 4) { 
+  gryffindor++; 
+  std::cout << "Gryffindor now has " << gryffindor << " Points!\n"; 
+}
+
+else 
+  std::cout << "Invalid input - Try Again";
+
+
+// Question 4: 
+std::cout << "Question 4) Which road tempts you most?\n" << "\n" << "1) The wide, sunny grass lane\n" << "2) The narrow, dark, lantern-lit alley\n" << "3) The twisting, leaf-strewn path through woods\n" << "4) The cobbled street lined (ancient buildings)\n";
+std::cin >> answer_4; 
+
+if (answer_4 == 1) { 
+  hufflepuff++; 
+  std::cout << "Hufflepuff now has " << hufflepuff << " Points!\n"; 
+}
+
+else if (answer_4 == 2) {
+  slytherin++;
+  std::cout << "Slytherin now has " << slytherin << " Points!\n"; 
+}
+
+else if (answer_4 == 3) { 
+  gryffindor++; 
+  std::cout << "Gryffindor now has " << gryffindor << " Points!\n"; 
+}
+
+else if (answer_4 == 4) { 
+  ravenclaw++;
+  std::cout << "Ravenclaw now has " << ravenclaw << " Points!\n"; 
+}
+
+else 
+std::cout << "Invalid Request! - Try again"; 
+
+if (gryffindor > max) {
+  
+  max = gryffindor;
+  most_points_house = "Gryffindor";
+  
+}
+
+if (hufflepuff > max) {
+
+  max = hufflepuff;
+  most_points_house = "Hufflepuff";
+  
+}
+
+if (ravenclaw > max) {
+  
+  max = ravenclaw;
+  most_points_house = "Ravenclaw";
+  
+}
+
+if (slytherin > max) {
+  
+  max = slytherin;
+  most_points_house = "Slytherin";
+  
+}
+
+std::cout << most_points_house << "!\n";
+
+
+
+
+
+
+
+return 0; 
+}
